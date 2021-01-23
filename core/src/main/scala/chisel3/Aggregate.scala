@@ -394,7 +394,7 @@ object VecInit extends SourceInfoDoc {
 /** A trait for [[Vec]]s containing common hardware generators for collection
   * operations.
   */
-trait VecLike[T <: Data] extends collection.IndexedSeq[T] with HasId with SourceInfoDoc {
+trait VecLike[T <: Data] extends IndexedSeq[T] with HasId with SourceInfoDoc {
   def apply(p: UInt): T = macro CompileOptionsTransform.pArg
 
   /** @group SourceInfoTransformMacro */

@@ -289,7 +289,7 @@ trait Utils {
     exceptions.collectFirst{ case a: A => a } match {
       case Some(a) => throw a
       case None => exceptions match {
-        case Nil    => Unit
+        case Nil    => ()
         case h :: t => throw h
       }
     }
