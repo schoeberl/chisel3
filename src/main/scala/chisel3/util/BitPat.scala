@@ -111,7 +111,7 @@ sealed class BitPat(val value: BigInt, val mask: BigInt, width: Int) extends Sou
   override def equals(obj: Any): Boolean = {
     obj match {
       case y: BitPat => value == y.value && mask == y.mask && getWidth == y.getWidth
-      case _ => false
+      case _ => throw new RuntimeException("BitPat can only compare to another BitPat.")
     }
   }
 
